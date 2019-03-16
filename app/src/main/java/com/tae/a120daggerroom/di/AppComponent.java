@@ -1,11 +1,11 @@
-package com.tae.di;
+package com.tae.a120daggerroom.di;
 
 import android.app.Application;
 
 import com.tae.a120daggerroom.data.PersonDao;
 import com.tae.a120daggerroom.repository.DemoDatabase;
 import com.tae.a120daggerroom.repository.PersonRepository;
-import com.tae.view.MainActivity;
+import com.tae.a120daggerroom.view.MainActivity;
 
 import javax.inject.Singleton;
 

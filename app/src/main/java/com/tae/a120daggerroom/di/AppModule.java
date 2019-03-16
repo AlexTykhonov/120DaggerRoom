@@ -1,4 +1,4 @@
-package com.tae.di;
+package com.tae.a120daggerroom.di;
 
 import android.app.Application;
 

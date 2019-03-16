@@ -21,19 +21,19 @@ public class Person {
         this.id = id;
     }
 
-    public String getTitle() {
+    public String getName() {
         return name;
     }
 
-    public void setTitle(String title) {
+    public void setName(String title) {
         this.name = title;
     }
 
-    public String getDescription() {
+    public String getSurname() {
         return surname;
     }
 
-    public void setDescription(String surname) {
+    public void setSurname(String surname) {
         this.surname = surname;
     }
 }

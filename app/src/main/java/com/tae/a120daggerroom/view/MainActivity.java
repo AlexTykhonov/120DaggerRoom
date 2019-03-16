@@ -1,4 +1,4 @@
-package com.tae.view;
+package com.tae.a120daggerroom.view;
 
 import android.arch.lifecycle.Observer;
 import android.support.annotation.Nullable;
@@ -7,6 +7,11 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.tae.a120daggerroom.R;
+import com.tae.a120daggerroom.data.Person;
+import com.tae.a120daggerroom.repository.PersonRepository;
+import com.tae.a120daggerroom.di.AppModule;
+import com.tae.a120daggerroom.di.DaggerAppComponent;
+import com.tae.a120daggerroom.di.RoomModule;
 
 import java.util.List;
 
@@ -15,7 +20,7 @@ import javax.inject.Inject;
 public class MainActivity extends AppCompatActivity {
 
     @Inject
-    public ProductRepository productRepository;
+    public PersonRepository personRepository;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
                 .inject(this);
 
 
-        productRepository.findAll().observe(this, new Observer<List<Product>>() {
+        personRepository.findAll().observe(this, new Observer<List<Person>>() {
             @Override
-            public void onChanged(@Nullable List<Product> products) {
-                Toast.makeText(MainActivity.this, String.format("Product size: %s", products.size()), Toast.LENGTH_SHORT).show();
+            public void onChanged(@Nullable List<Person> persons) {
+                Toast.makeText(MainActivity.this, String.format("Person size: %s", persons.size()), Toast.LENGTH_SHORT).show();
             }
         });
     }

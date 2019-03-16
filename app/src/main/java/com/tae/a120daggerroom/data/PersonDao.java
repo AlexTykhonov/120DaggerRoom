@@ -15,7 +15,7 @@ public interface PersonDao {
     @Query("SELECT * FROM Person WHERE id=:id")
     LiveData<Person> findById(int id);
 
-    @Query("SELECT * FROM (Person)")
+    @Query("SELECT * FROM Person")
     LiveData<List<Person>> findAll();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

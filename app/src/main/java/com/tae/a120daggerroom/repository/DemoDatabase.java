@@ -7,7 +7,7 @@ import com.tae.a120daggerroom.data.Person;
 import com.tae.a120daggerroom.data.PersonDao;
 
 
-@Database(entities = {Person.class}, version = DemoDatabase.VERSION)
+@Database(entities = {Person.class}, version = DemoDatabase.VERSION, exportSchema = false)
 public abstract class DemoDatabase extends RoomDatabase {
 
     static final int VERSION = 1;
